@@ -1,3 +1,5 @@
+package org.example;
+
 import javax.swing.*;
 
 public class LogInScreenGUI {
@@ -9,4 +11,7 @@ public class LogInScreenGUI {
     private JButton signInButton;
     private JButton guestButton;
 
+    public LogInScreenGUI() {
+
+    }
 }

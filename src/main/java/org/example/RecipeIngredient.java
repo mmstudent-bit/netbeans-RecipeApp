@@ -6,17 +6,17 @@ public class RecipeIngredient {
     private Ingredient ingredient;
     private double quantity;
     private String unit;
-    private String preperationNote;
+    private String preparationNote;
 
     public RecipeIngredient(){}
 
-    public RecipeIngredient(int recipeIngredientID, int recipeID, Ingredient ingredient, double quantity,String unit, String preperationNote){
+    public RecipeIngredient(int recipeIngredientID, int recipeID, Ingredient ingredient, double quantity,String unit, String preparationNote){
         this.recipeIngredientID = recipeIngredientID;
         this.recipeID = recipeID;
         this.ingredient = ingredient;
         this.setQuantity(quantity);
         this.unit = unit;
-        this.preperationNote = preperationNote;
+        this.preparationNote = preparationNote;
     }
 
     public int getRecipeIngredientID() {
@@ -26,7 +26,7 @@ public class RecipeIngredient {
         this.recipeIngredientID = recipeIngredientID;
     }
 
-    public int getrecipeID(){
+    public int getRecipeID(){
         return recipeID;
     }
 
@@ -58,12 +58,12 @@ public class RecipeIngredient {
         this.unit = unit;
     }
 
-    public String getPreperationNote(){
-        return preperationNote;
+    public String getPreparationNote(){
+        return preparationNote;
     }
 
-    public void setPreperationNote(String preperationNote) {
-        this.preperationNote = preperationNote;
+    public void setPreparationNote(String preparationNote) {
+        this.preparationNote = preparationNote;
     }
 
     public Double calculateItemCalories(){
