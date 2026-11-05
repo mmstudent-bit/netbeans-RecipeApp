@@ -9,8 +9,8 @@ public class Substitution {
     public Substitution(){}
     public Substitution(int substitutionID, Ingredient originalIngredient, Ingredient substituteIngredient){
         this.substitutionID = substitutionID;
-        this.setOriginalIngredient(originalIngredient);
-        this.setsubstituteIngredient(substituteIngredient);
+        this.originalIngredient = originalIngredient;
+        this.substituteIngredient = substituteIngredient;
     }
 
     public int getSubstitutionID(){
@@ -34,8 +34,8 @@ public class Substitution {
     public String getNote(){
         return this.note;
     }
-    public String setNote(String Note){
-        this.note = note;
+    public void setNote(String Note){
+        this.note = Note;
     }
 
     public String getFormattedSubstiution(){
@@ -48,11 +48,11 @@ public class Substitution {
         return String.format("Replace %s with @s", origName, subName);
     }
 
-    public boolean isValidSubstitution{
+    public boolean isValidSubstitution(){
         if (originalIngredient == null || substituteIngredient == null){
             return false;
         }
-        return originalIngredient.getOriginalIngredientID != substituteIngredient.getIngredietID();
+        return getOriginalIngredient() != getSubstituteIngredient();
     }
 
 }
